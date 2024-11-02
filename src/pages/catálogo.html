@@ -1,0 +1,558 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../style/output.css" rel="stylesheet">
+  <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+</head>
+<body>
+
+  <header class="pl-2 pr-6 w-full h-28 bg-secondaryBlue fixed top-0 z-10 flex items-center justify-between border-b-accentBlue border-b-8">
+
+    <div>
+      <a href="./catálogo.html"> <img class="w-20 h-20 cursor-pointer" src="../public/images/logo_pp.png" alt="Logo da Planeta Papel"> </a>
+    </div>
+
+    <div>
+      <a href="./open_menu.html"> <img class="w-10 h-10 cursor-pointer" src="../public/images/menu.png" alt="Menu de Navegação"> </a>
+      <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+    </div>
+
+  </header>
+
+  <main class="pt-36 pb-10 pl-6 pr-6 min-h-full h-auto max-w-full overflow-hidden">
+
+    <!-- PESQUISA -->
+    <form class="w-full max-w-[1200px] mx-auto">
+        <div class="flex">
+            <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-[5] inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
+                <span class="text-accentBlue font-bold">Categoria</span>
+                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg>
+            </button>
+
+            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+                    <li>
+                        <button type="button" class="inline-flex w-full px-4 py-2 hover:text-primaryBlue dark:hover:bg-gray-600 dark:hover:text-white">Folha A4</button>
+                    </li>
+                    <li>
+                        <button type="button" class="inline-flex w-full px-4 py-2 hover:text-primaryBlue dark:hover:bg-gray-600 dark:hover:text-white">Cartolina</button>
+                    </li>
+                    <li>
+                        <button type="button" class="inline-flex w-full px-4 py-2 hover:text-primaryBlue dark:hover:bg-gray-600 dark:hover:text-white">Post-it</button>
+                    </li>
+                    <li>
+                        <button type="button" class="inline-flex w-full px-4 py-2 hover:text-primaryBlue dark:hover:bg-gray-600 dark:hover:text-white">Cadernos</button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="relative w-full">
+                <input type="search" id="search-dropdown" class="overflow-hidden whitespace-nowrap text-ellipsis block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" 
+                placeholder="Procurar na Planeta Papel" required />
+
+                <button type="submit" class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white rounded-e-lg border border-blue-700 hover:bg-primaryBlue focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-primaryBlue dark:hover:bg-primaryBlue bg-secondaryBlue dark:focus:ring-blue-800">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <hr class="mt-8 mb-8 bg-black opacity-[0.3]">
+
+    <!-- SECÃO -->
+    <div class="p-6 w-full overflow-hidden">
+        <div class="flex items-center mb-6 gap-3">
+            <img src="../public/images/arquivo.png" alt="" class="size-8">
+            <h1 class="text-2xl font-semibold text-secondaryBlue">Categoria ......................</h1>
+        </div>
+
+        <!-- PRODUTOS -->
+        <div class="scroll-produtos w-full overflow-x-auto flex justify-start items-center gap-6 p-4">
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>   
+            
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produto</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produto</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produto</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produto</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produto</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produto</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+            
+                <div class="min-w-[200px] h-[220px] bg-accentBlue rounded-lg shadow-md flex-shrink-0 flex justify-center items-center cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/mais.png" alt="Mais" class="prod w-18 h-18 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-white font-semibold block text-xl"> Ver mais de <span class="text-primaryBlue"> Categoria </span></span>
+                    </div>
+                </div>
+                </div>
+
+        </div>
+                
+    </div>
+
+    <!-- SECÃO -->
+    <div class="p-6 w-full overflow-hidden">
+        <div class="flex items-center mb-6 gap-3">
+          <img src="../public/images/arquivo.png" alt="" class="size-8">
+          <h1 class="text-2xl font-semibold text-secondaryBlue">Categoria ......................</h1>
+        </div>
+
+        <!-- PRODUTOS -->
+        <div class="scroll-produtos w-full overflow-x-auto flex justify-start items-center gap-6 p-4">
+
+            <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                  <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                  </div>
+                  <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                  </div>
+                </div>
+              </div>
+              
+          
+              <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                  <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                  </div>
+                  <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produto</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                  <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                  </div>
+                  <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                  <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                  </div>
+                  <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                  <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                  </div>
+                  <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                  <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                  </div>
+                  <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="min-w-[200px] h-[220px] bg-accentBlue rounded-lg shadow-md flex-shrink-0 flex justify-center items-center cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                  <div class="mb-4">
+                    <img src="../public/images/mais.png" alt="Mais" class="prod w-18 h-18 object-cover">
+                  </div>
+                  <div class="text-center">
+                    <span class="text-white font-semibold block text-xl"> Ver mais de <span class="text-primaryBlue"> Categoria </span></span>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+              
+    </div>
+
+    <!-- SECÃO -->
+    <div class="p-6 w-full overflow-hidden">
+        <div class="flex items-center mb-6 gap-3">
+            <img src="../public/images/arquivo.png" alt="" class="size-8">
+            <h1 class="text-2xl font-semibold text-secondaryBlue">Categoria ......................</h1>
+        </div>
+
+        <!-- PRODUTOS -->
+        <div class="scroll-produtos w-full overflow-x-auto flex justify-start items-center gap-6 p-4">
+
+            <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+                
+            
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produto</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+            
+                <div class="min-w-[200px] h-[220px] bg-accentBlue rounded-lg shadow-md flex-shrink-0 flex justify-center items-center cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/mais.png" alt="Mais" class="prod w-18 h-18 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-white font-semibold block text-xl"> Ver mais de <span class="text-primaryBlue"> Categoria </span></span>
+                    </div>
+                </div>
+                </div>
+
+        </div>
+                
+    </div>
+
+    <!-- PROPAGANDA -->
+    <div class="mt-[3rem] mb-[3rem] w-full h-32 flex justify-center items-center cursor-pointer"> 
+        <div class="bg-primaryBlue min-w-[400px] w-2/3 h-full rounded-3xl flex justify-center items-center">
+            <div class="w-1/2 h-full border-r-white border-r-4 flex items-center justify-center text-3xl text-white font-bold text-center">
+                PLANO PAPEL
+            </div>
+            <div class="w-1/2 h-full flex items-center justify-center text-center">
+                <div">
+                    <span class="text-white font-bold text-xl"> Ganhe 20% de desconto </span>
+                    <br> 
+                    <span class="text-black text-lg">Clique e saiba mais!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECÃO -->
+    <div class="p-6 w-full overflow-hidden">
+        <div class="flex items-center mb-6 gap-3">
+            <img src="../public/images/arquivo.png" alt="" class="size-8">
+            <h1 class="text-2xl font-semibold text-secondaryBlue">Categoria ......................</h1>
+        </div>
+
+        <!-- PRODUTOS -->
+        <div class="scroll-produtos w-full overflow-x-auto flex justify-start items-center gap-6 p-4">
+
+            <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+                
+            
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produto</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="min-w-[200px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/prod.png" alt="Produto" class="w-32 h-32 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-gray-800 font-semibold block max-w-[150px] truncate">Nome do produtoooooooooooo</span>
+                    <span class="text-gray-500 font-bold">R$ xx,xx</span>
+                    </div>
+                </div>
+                </div>
+            
+                <div class="min-w-[200px] h-[220px] bg-accentBlue rounded-lg shadow-md flex-shrink-0 flex justify-center items-center cursor-pointer">
+                <div class="flex flex-col items-center p-4">
+                    <div class="mb-4">
+                    <img src="../public/images/mais.png" alt="Mais" class="prod w-18 h-18 object-cover">
+                    </div>
+                    <div class="text-center">
+                    <span class="text-white font-semibold block text-xl"> Ver mais de <span class="text-primaryBlue"> Categoria </span></span>
+                    </div>
+                </div>
+                </div>
+
+        </div>
+                
+    </div>    
+
+  </main>
+
+  <footer class="w-full h-20 bg-secondaryBlue flex items-center justify-center border-t-accentBlue border-t-4">
+    <h3 class="text-white text-center text-xs">
+       &copy; Todos os Direitos Reservados à 
+      <br>
+      Planeta Papel&trade;
+    </h3>
+  </footer>
+
+</body>
+</html>

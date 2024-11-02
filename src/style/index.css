@@ -31,3 +31,18 @@ body{
     background: #555; /* Cor da parte rolável ao passar o mouse */
     width: 12px; /* Largura da scrollbar */
 }
+
+  /* Personalize a barra de rolagem para a área de produtos */
+  .scroll-produtos::-webkit-scrollbar {
+    height: 8px; /* Altura da barra de rolagem */
+  }
+
+  .scroll-produtos::-webkit-scrollbar-thumb {
+    background-color: #1D437A; /* Cor do "polegar" da barra */
+    border-radius: 4px;
+  }
+
+  .scroll-produtos::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor do fundo da barra */
+    border-radius: 4px;
+  }
