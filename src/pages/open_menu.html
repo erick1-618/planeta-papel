@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../style/output.css" rel="stylesheet">
+
+  <style>
+    /* Exemplo adicional de opacidade com rgba */
+    .bg-opacity-50 {
+      background-color: rgba(0, 0, 0, 0.364); /* Fundo vermelho com 50% de opacidade */
+    }
+    </style>
+
+</head>
+
+<!-- TELA ILUSTRATIVA PARA MOSTRAR O MENU ABERTO -->
+<!-- NÃO COLOCAR CONTEÚDO, APENAS LINKS NA LISTA NÃO ORDENADA -->
+
+  <!-- MENU ABERTO -->
+  <div class="z-50 absolute top-0 w-full h-full flex justify-end bg-opacity-50">
+    <div class="h-full md:w-desktop sm:w-mobile bg-secondaryBlue flex justify-center text-white fixed">
+        
+        <div class="w-full min-w-[50px]">
+
+            <div class="p-4 h-10 text-3xl cursor-pointer"><a href="./template.html">✖</a></div>
+            <div class="p-12 pt-0 text-center space-y-7 text-xl">
+                <h1 class="text-3xl font-bold">MENU</h1>
+        
+                <hr>
+
+                <ul class="cursor-pointer hover:text-primaryBlue">👤 Meu Perfil</ul>
+                <ul class="cursor-pointer hover:text-primaryBlue">🛒 Carrinho</ul>
+                <ul class="cursor-pointer hover:text-primaryBlue">💸 Planos Mensais</ul>
+                <ul class="cursor-pointer hover:text-primaryBlue">📦 Pedidos</ul>
+                <ul class="cursor-pointer hover:text-primaryBlue">♻ Reciclagem</ul>
+                
+                <hr>
+
+                <ul class=" text-white font-bold cursor-pointer hover:text-red-700"> ❌ Logout</ul>
+            
+            </div>
+
+        </div>
+
+    </div>
+  </div>
+
+  <header class="pl-2 pr-6 w-full h-28 bg-secondaryBlue fixed top-0 z-10 flex items-center justify-between border-b-accentBlue border-b-8">
+
+    <div>
+      <img class="w-20 h-20 cursor-pointer" src="../public/images/logo_pp.png" alt="Logo da Planeta Papel">
+    </div>
+
+    <div>
+      <a href="./open_menu.html"> <img class="w-10 h-10 cursor-pointer" src="../public/images/menu.png" alt="Menu de Navegação"> </a>
+    </div>
+
+  </header>
+
+  <main class="pt-36 pb-10 pl-6 pr-6 min-h-full h-auto max-w-full">
+    <!-- CONTEUDO AQUI -->
+  </main>
+
+
+</body>
+</html>
