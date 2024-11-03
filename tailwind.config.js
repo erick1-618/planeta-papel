@@ -18,6 +18,10 @@ module.exports = {
         gray: '#E6E6E7',             // Cinza
         dark: '#14141C',             // Cinza claro
       },
+
+      screens:{
+        vs: "410px",
+      }
     },
   },
   plugins: [
