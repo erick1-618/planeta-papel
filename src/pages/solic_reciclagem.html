@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../style/output.css" rel="stylesheet">
+  <title>Solicitação de Reciclagem</title>
+</head>
+<body>
+
+  <header class="pl-2 pr-6 w-full h-28 bg-secondaryBlue fixed top-0 z-10 flex items-center justify-between border-b-accentBlue border-b-8">
+
+    <div>
+      <a href="./catálogo.html"> <img class="w-20 h-20 cursor-pointer" src="../public/images/logo_pp.png" alt="Logo da Planeta Papel"> </a>
+    </div>
+
+    <div>
+      <a href="./open_menu.html"> <img class="w-10 h-10 cursor-pointer" src="../public/images/menu.png" alt="Menu de Navegação"> </a>
+      <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+    </div>
+
+  </header>
+
+  <main class="pt-36 pb-10 pl-6 pr-6 min-h-full h-auto max-w-full">
+    <div class="flex items-center mb-6 gap-3">
+        <img src="../public/images/reciclagem.png" alt="" class="size-8">
+        <span>
+            <h1 class="text-2xl font-semibold text-secondaryBlue">Solicitar Reciclagem.......</h1>
+            <p class="text-sm font-semibold text-primaryBlue">Essa ação está sujeita  à validação</p>
+        </span>
+    </div>
+
+    <div class="w-full min-w-[300px] mt-5 py-5 flex flex-col bg-white rounded-3xl border-2 border-accentBlue">
+        <div class="w-full min-w-[200px] h-full flex justify-between px-6 items-center border-b-red-400 border-b-2">
+            <h1 class="text-xl font-bold text-secondaryBlue">O que vai reciclar ?</h1>
+            <img class="size-7 cursor-pointer" src="../public/images/seta_baixo.png" alt="">
+        </div>
+        <div class="w-full min-w-[200px] h-full flex justify-start px-6">
+            <div class="acp awj mt-3">
+                <div class="ma zr">
+                    <input id="sizes-0" name="sizes[]" type="checkbox" class="oi sp ael agy azv bpo" value="xs">
+                    <label for="sizes-0" class="ka axo azf font-semibold pl-2">Folhas/Caderno</label>
+                    <div class="px-6 py-1">
+                        <p class="font-semibold text-secondaryBlue">Quanto vai reciclar ?</p>
+                        <select id="medida" name="medida-0" class="ut aet afz agy asv awp axi aya azg bdd boj box bpb bpo cqp rounded-xl">
+                            <option value="1">Medida</option>
+                        </select>
+                        <select id="quantity-0" name="quantity-0" class="ut aet afz agy asv awp axi aya azg bdd boj box bpb bpo cqp"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select>
+                    </div>
+                </div>
+                <div class="ma zr">
+                    <input id="sizes-0" name="sizes[]" type="checkbox" class="oi sp ael agy azv bpo" value="xs">
+                    <label for="sizes-0" class="ka axo azf font-semibold pl-2">Cartolina</label>
+                </div>
+                <div class="ma zr">
+                    <input id="sizes-0" name="sizes[]" type="checkbox" class="oi sp ael agy azv bpo" value="xs">
+                    <label for="sizes-0" class="ka axo azf font-semibold pl-2">Post-it</label>
+                </div>
+                <div class="ma zr">
+                    <input id="sizes-0" name="sizes[]" type="checkbox" class="oi sp ael agy azv bpo" value="xs">
+                    <label for="sizes-0" class="ka axo azf font-semibold pl-2">Outro:</label>
+                    <input type="search" id="search-dropdown" class="overflow-hidden whitespace-nowrap text-ellipsis block p-2.5 w-30 z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" 
+                placeholder="O que?" required />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full min-w-[300px] mt-5 py-5 flex flex-col bg-white rounded-3xl border-2 border-accentBlue">
+        <div class="w-full min-w-[200px] h-full flex justify-between px-6 items-center border-b-red-400 border-b-2">
+            <h1 class="text-xl font-bold text-secondaryBlue">Modalidade da Coleta</h1>
+        </div>
+        <div class="w-full min-w-[200px] h-full flex justify-start px-6">
+            <div class="acp awj mt-3">
+                <div class="ma zr">
+                    <input id="sizes-0" name="sizes[]" type="checkbox" class="oi sp ael agy azv bpo" value="xs">
+                    <label for="sizes-0" class="ka axo azf font-semibold pl-2">Coletar no meu endereço</label>
+                </div>
+                <div class="ma zr">
+                    <input id="sizes-0" name="sizes[]" type="checkbox" class="oi sp ael agy azv bpo" value="xs">
+                    <label for="sizes-0" class="ka axo azf font-semibold pl-2">Vou levar à loja</label>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+  </main>
+
+  <footer class="w-full h-20 bg-secondaryBlue flex items-center justify-center border-t-accentBlue border-t-4">
+    <h3 class="text-white text-center text-xs">
+       &copy; Todos os Direitos Reservados à 
+      <br>
+      Planeta Papel&trade;
+    </h3>
+  </footer>
+
+</body>
+</html>
