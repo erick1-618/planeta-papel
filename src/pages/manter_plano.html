@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../style/output.css" rel="stylesheet">
+  <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+</head>
+<body>
+
+  <header class="pl-2 pr-6 w-full h-28 bg-secondaryBlue fixed top-0 z-10 flex items-center justify-between border-b-accentBlue border-b-8">
+
+    <div>
+      <a href="./catálogo.html"> <img class="w-20 h-20 cursor-pointer" src="../public/images/logo_pp.png" alt="Logo da Planeta Papel"> </a>
+    </div>
+
+    <div>
+      <a href="./open_menu.html"> <img class="w-10 h-10 cursor-pointer" src="../public/images/menu.png" alt="Menu de Navegação"> </a>
+      <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+    </div>
+
+  </header>
+
+  <main class="pt-36 pb-10 pl-6 pr-6 min-h-full h-auto max-w-full overflow-hidden">
+
+    <div class="flex justify-between flex-col lg:flex-row gap-5 mb-8 space-y-1 lg:space-y-0">
+        <div class="flex items-center gap-3 w-fit">
+            <img src="../public/images/assinatura.png" alt="" class="size-8">
+            <h1 class="text-2xl font-semibold text-secondaryBlue">Gerenciar Planos</h1>
+        </div>
+        <button class="px-4 bg-primaryBlue text-white rounded-xl">Adicionar Plano</button>
+    </div>
+
+    <!-- PLANOS -->
+
+
+    <div class="w-full h-[100px] min-w-[300px] mt-5 flex flex-col bg-white rounded-3xl border-2 border-accentBlue">
+        <div class="w-full min-w-[200px] h-full flex justify-between px-6 items-center">
+            <h1 class="text-xl font-bold text-primaryBlue">Plano Empresarial</h1>
+            <img class="size-7 cursor-pointer" src="../public/images/seta_baixo.png" alt="">
+        </div>
+    </div>
+
+    <div class="w-full h-[550px] min-w-[300px] mt-5 flex flex-col bg-white rounded-3xl border-2 border-accentBlue">
+        <div class="w-full min-w-[200px] h-20 flex justify-between px-6 items-center border-b-red-400 border-b-2">
+            <h1 class="text-xl font-bold text-primaryBlue">Plano Post-it</h1>
+            <img class="size-7 cursor-pointer" src="../public/images/seta_baixo.png" alt="">
+        </div>
+
+        <div class="w-full h-70 mt-10 flex justify-center items-center">
+            <div class="w-[80%] h-full border-[#0000009d] border-2">
+                <div class="h-1/6 w-full flex justify-start items-center p-4 gap-4 border-b-red-400 border-b-2 min-w-[200px]">
+                    <h1 class="text-xl font-semibold text-">Preço Mensal: </h1>
+                    <h1 class="text-xl font-semibold text-secondaryBlue">R$ xx,xx</h1>
+                </div>
+
+                <div class="h-1/6 w-full border-b-red-400 border-b-2 flex justify-start items-center p-4 gap-4 min-w-[200px]">
+                    <h1 class="text-xl font-semibold text-">Duração: </h1>
+                    <h1 class="text-xl font-semibold text-secondaryBlue">3 meses</h1>
+                </div>
+
+                <div class="h-1/2 w-full justify-start items-center p-4 gap-4 min-w-[200px]">
+                    <h1 class="text-xl font-semibold text-">Benefícios Mensais: </h1>
+                    <h1 class="text-xl font-semibold text-secondaryBlue space-y-2">
+                        <ul> 🌟 xxxxxxxxxx</ul>
+                        <ul> 🌟 xxxxxxxxxx</ul>
+                        <ul> 🌟 xxxxxxxxxx</ul>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full h-70 mt-10 flex justify-center items-center">
+            <button type="submit" class="min-w-[200px] hover:bg-secondaryBlue w-3/4 bg-primaryBlue text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-2xl px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Editar plano</button>
+        </div>
+    </div>
+
+    <div class="w-full h-[100px] min-w-[300px] mt-5 flex flex-col bg-white rounded-3xl border-2 border-accentBlue">
+        <div class="w-full min-w-[200px] h-full flex justify-between px-6 items-center">
+            <h1 class="text-xl font-bold text-primaryBlue">Plano Papel</h1>
+            <img class="size-7 cursor-pointer" src="../public/images/seta_baixo.png" alt="">
+        </div>
+    </div>
+
+    <div class="w-full h-[100px] min-w-[300px] mt-5 flex flex-col bg-white rounded-3xl border-2 border-accentBlue">
+        <div class="w-full min-w-[200px] h-full flex justify-between px-6 items-center">
+            <h1 class="text-xl font-bold text-primaryBlue">Plano Origami</h1>
+            <img class="size-7 cursor-pointer" src="../public/images/seta_baixo.png" alt="">
+        </div>
+    </div>
+
+    <div class="w-full h-[100px] min-w-[300px] mt-5 flex flex-col bg-white rounded-3xl border-2 border-accentBlue">
+        <div class="w-full min-w-[200px] h-full flex justify-between px-6 items-center">
+            <h1 class="text-xl font-bold text-primaryBlue">Plano Cartolina</h1>
+            <img class="size-7 cursor-pointer" src="../public/images/seta_baixo.png" alt="">
+        </div>
+    </div>
+    
+
+  </main>
+
+  <footer class="w-full h-20 bg-secondaryBlue flex items-center justify-center border-t-accentBlue border-t-4">
+    <h3 class="text-white text-center text-xs">
+       &copy; Todos os Direitos Reservados à 
+      <br>
+      Planeta Papel&trade;
+    </h3>
+  </footer>
+
+</body>
+</html>

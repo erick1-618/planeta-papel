@@ -17,6 +17,8 @@ module.exports = {
         accentBlue: '#1D437A',       // Azul de destaque
         gray: '#E6E6E7',             // Cinza
         dark: '#14141C',             // Cinza claro
+        cancelRed: '#FB3C3E',        // Vermelho de cancelar
+        whiteBoard: '#FFFFFF'
       },
 
       screens:{
