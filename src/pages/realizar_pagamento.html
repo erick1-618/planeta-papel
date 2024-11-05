@@ -12,7 +12,6 @@
   </style>
 </head>
 <body class="bg-gray-100">
-  <!-- Navbar -->
   <header class="pl-2 pr-6 w-full h-28 bg-[#2A5EAD] fixed top-0 z-10 flex items-center justify-between border-b-8" style="border-color: #1D437A;">
     <div>
       <a href="./catálogo.html">
@@ -26,11 +25,9 @@
     </div>
   </header>
 
-  <!-- Espaço para a navbar fixa -->
   <div class="h-28"></div>
-  <!-- Conteúdo da Página -->
+
   <div class="container mx-auto mt-6 p-4">
-    <!-- Título principal com logo e cor personalizada -->
     <div class="flex items-center mb-6">
       <img src="../public/images/economizar.png" alt="Mão com Dinheiro" class="w-11 h-11 mr-2 transform scale-x-[-1]"> 
       <div class="flex flex-col justify-center">
@@ -39,7 +36,6 @@
       </div>
     </div>
 
-    <!-- Opção de Pix -->
     <div class="bg-white shadow-md rounded-[20px] border-2 p-4 mb-6" style="border-color: #1D437A;">
       <div class="flex items-center mb-2">
         <input type="radio" id="pix" name="payment" class="mr-2">
@@ -48,7 +44,7 @@
           <svg class="w-5 h-5 transition-transform duration-200 transform" id="pix-arrow" viewBox="0 0 20 20" fill="currentColor"><path d="M7 10l5-5 5 5H7z"/></svg>
         </button>
       </div>
-      <hr class="border-[#5a7597] mb-4"> <!-- Linha horizontal mais suave -->
+      <hr class="border-[#5a7597] mb-4">
       <div id="pix-details" class="hidden">
         <p class="text-center text-[#828282] mt-4">
           Ao gerar o Código Pix do pedido você pode pagar escaneando o <strong>QR Code</strong> ou <strong>Copiar</strong> e <strong>Colar</strong>.
@@ -66,7 +62,6 @@
       </div>
     </div>
 
-    <!-- Opção de Cartão de Crédito -->
     <div class="bg-white shadow-md rounded-[20px] border-2 p-4 mb-6" style="border-color: #1D437A;">
       <div class="flex items-center mb-2">
         <input type="radio" id="cartao" name="payment" class="mr-2">
@@ -75,7 +70,7 @@
           <svg class="w-5 h-5 transition-transform duration-200 transform" id="cartao-arrow" viewBox="0 0 20 20" fill="currentColor"><path d="M7 10l5-5 5 5H7z"/></svg>
         </button>
       </div>
-      <hr class="border-[#5a7597] mb-4"> <!-- Linha horizontal mais suave -->
+      <hr class="border-[#5a7597] mb-4"> 
       <div id="cartao-details" class="hidden">
         <p class="text-[#1D437A] font-semibold mb-2">Bandeiras aceitas: 
           <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" class="inline w-8 h-8 mx-1">
@@ -88,14 +83,13 @@
           <input type="text" placeholder="CVV" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4"> <!-- Aumentado o espaçamento à esquerda -->
           <input type="text" placeholder="Nome no cartão" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4"> <!-- Aumentado o espaçamento à esquerda -->
       
-          <!-- Campo de Parcelas com seta personalizada -->
-          <div class="relative mb-4"> <!-- Aumentado o espaçamento inferior -->
+          <div class="relative mb-4"> 
             <select id="parcelas-select" class="appearance-none border border-[#1D437A] p-2 rounded-[20px] w-full pr-8" onclick="toggleArrow('parcelas-arrow')">
               <option>Parcelas</option>
               <option>1x</option>
               <option>2x</option>
             </select>
-            <!-- Ícone de seta para baixo ao lado do select -->
+ 
             <svg id="parcelas-arrow" class="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-[#1D437A] pointer-events-none transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
               <path d="M7 8l5 5 5-5H7z"/>
             </svg>
@@ -119,13 +113,11 @@
           }
         }
       
-        // Função para rotacionar a seta do campo "Parcelas"
         function toggleArrow(arrowId) {
           const arrow = document.getElementById(arrowId);
           arrow.style.transform = arrow.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
         }
       
-        // Função para copiar o texto para a área de transferência
         function copyToClipboard(text) {
           navigator.clipboard.writeText(text).then(() => {
             alert('Número copiado: ' + text);
@@ -134,7 +126,7 @@
       </script>
     </div>
 
-    <!-- Mensagem de confirmação -->
+  
     <div class="bg-white shadow-md rounded-[20px] p-4 mt-6" style="border-color: #1D437A;">
       <p class="text-center text-[#2A5EAD] font-semibold mb-2">
         Assim que o pagamento é confirmado, seu pedido é concluído. =)
