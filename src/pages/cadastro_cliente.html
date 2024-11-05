@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Clientes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navbar -->
+  <header class="pl-2 pr-6 w-full h-28 bg-[#2A5EAD] fixed top-0 z-10 flex items-center justify-between border-b-8" style="border-color: #1D437A;">
+    <div>
+      <a href="./catálogo.html">
+        <img class="w-20 h-20 cursor-pointer" src="../public/images/logo_pp.png" alt="Logo da Planeta Papel">
+      </a>
+    </div>
+    <div>
+      <a href="./open_menu.html">
+        <img class="w-10 h-10 cursor-pointer" src="../public/images/menu.png" alt="Menu de Navegação">
+      </a>
+    </div>
+  </header>
+
+  <!-- Espaço para a navbar fixa -->
+  <div class="h-28"></div>
+
+  <!-- Conteúdo da Página -->
+  <div class="container mx-auto mt-6 p-4">
+    <div class="flex items-center mb-6">
+      <img src="../public/images/cadastro.png" alt="Cadastro de Clientes" class="w-11 h-11 mr-2 transform scale-x-[-1]">
+      <div class="flex flex-col justify-center">
+        <h1 class="text-2xl font-bold" style="color: #2A5EAD;">Cadastro de Clientes</h1>
+        <h2 class="text-md" style="color: #2A5EAD;">Preencha os dados abaixo</h2>
+      </div>
+    </div>
+
+    <!-- Formulário de Cadastro -->
+    <div class="bg-white shadow-md rounded-[20px] border-2 p-4 mb-6" style="border-color: #1D437A;">
+      <form>
+        <input type="text" placeholder="Nome Completo" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4">
+        <input type="email" placeholder="E-mail" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4">
+        <input type="text" placeholder="Telefone" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4">
+        <input type="text" placeholder="Bairro" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4">
+        <input type="text" placeholder="Endereço" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4">
+        <input type="text" placeholder="Complemento" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4">
+        <input type="text" placeholder="CEP" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4">
+        
+        <button class="bg-[#2A56ED] text-white py-2 px-4 rounded-full w-full mt-4 font-bold text-lg">Cadastrar</button>
+      </form>
+    </div>
+    
+    <!-- Mensagem de Confirmação -->
+    <div class="text-center mt-4">
+      <p class="text-[#828282]">Em caso de dúvida, ligue para +55 021 1234-5678</p>
+    </div>
+  </div>
+</body>
+</html>

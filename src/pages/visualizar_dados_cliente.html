@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizar Dados</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navbar -->
+  <header class="pl-2 pr-6 w-full h-28 bg-[#2A5EAD] fixed top-0 z-10 flex items-center justify-between border-b-8" style="border-color: #1D437A;">
+    <div>
+      <a href="./catálogo.html">
+        <img class="w-20 h-20 cursor-pointer" src="../public/images/logo_pp.png" alt="Logo da Planeta Papel">
+      </a>
+    </div>
+    <div>
+      <a href="./open_menu.html">
+        <img class="w-10 h-10 cursor-pointer" src="../public/images/menu.png" alt="Menu de Navegação">
+      </a>
+    </div>
+  </header>
+
+  <!-- Espaço para a navbar fixa -->
+  <div class="h-28"></div>
+  <!-- Conteúdo da Página -->
+  <div class="container mx-auto mt-6 p-4">
+    <div class="flex items-center mb-6">
+      <img src="../public/images/perfil.png" alt="Dados do Cliente" class="w-11 h-11 mr-2 transform scale-x-[-1]">
+      <div class="flex flex-col justify-center">
+        <h1 class="text-2xl font-bold" style="color: #2A5EAD;">Dados do Cliente</h1>
+        <h2 class="text-md" style="color: #2A5EAD;">Visualize e edite suas informações</h2>
+      </div>
+    </div>
+
+    <!-- Aba de Visualização de Dados -->
+    <div id="view-tab" class="bg-white shadow-md rounded-[20px] border-2 p-4 mb-6" style="border-color: #1D437A;">
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold text-[#1D437A]">Informações Pessoais</h3>
+        <p class="text-gray-700"><strong>Nome Completo:</strong> João da Silva</p>
+        <p class="text-gray-700"><strong>E-mail:</strong> joao.silva@email.com</p>
+        <p class="text-gray-700"><strong>Telefone:</strong> +55 21 9876-5432</p>
+        <button onclick="openEditTab('personal')" class="bg-[#2A56ED] text-white py-1 px-4 rounded-full mt-2">Editar</button>
+      </div>
+      <hr class="border-[#5a7597] my-4">
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold text-[#1D437A]">Endereço</h3>
+        <p class="text-gray-700"><strong>Bairro:</strong> Centro</p>
+        <p class="text-gray-700"><strong>Endereço:</strong> Rua Exemplo, 123</p>
+        <p class="text-gray-700"><strong>Complemento:</strong> Apto 101</p>
+        <p class="text-gray-700"><strong>CEP:</strong> 12345-678</p>
+        <button onclick="openEditTab('address')" class="bg-[#2A56ED] text-white py-1 px-4 rounded-full mt-2">Editar</button>
+      </div>
+      <hr class="border-[#5a7597] my-4">
+      
+      <div class="text-center mt-4">
+        <button class="bg-red-600 text-white py-2 px-4 rounded-full w-full font-bold">Excluir Conta</button>
+      </div>
+    </div>
+
+    <!-- Aba de Edição de Dados -->
+    <div id="edit-tab" class="bg-white shadow-md rounded-[20px] border-2 p-4 mb-6 hidden" style="border-color: #1D437A;">
+      <h3 class="text-lg font-semibold text-[#1D437A] mb-4">Editar Informações</h3>
+      
+      <!-- Formulário de Edição (personal) -->
+      <form id="edit-personal" class="hidden">
+        <input type="text" placeholder="Nome Completo" value="João da Silva" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4">
+        <input type="email" placeholder="E-mail" value="joao.silva@email.com" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4">
+        <input type="text" placeholder="Telefone" value="+55 21 9876-5432" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4">
+        <button type="button" onclick="closeEditTab()" class="bg-[#2A56ED] text-white py-2 px-4 rounded-full w-full mt-4 font-bold">Salvar</button>
+      </form>
+      
+      <!-- Formulário de Edição (address) -->
+      <form id="edit-address" class="hidden">
+        <input type="text" placeholder="Bairro" value="Centro" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4">
+        <input type="text" placeholder="Endereço" value="Rua Exemplo, 123" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4">
+        <input type="text" placeholder="Complemento" value="Apto 101" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4">
+        <input type="text" placeholder="CEP" value="12345-678" class="border border-[#1D437A] p-2 rounded-[20px] w-full mb-4 pl-4">
+        <button type="button" onclick="closeEditTab()" class="bg-[#2A56ED] text-white py-2 px-4 rounded-full w-full mt-4 font-bold">Salvar</button>
+      </form>
+    </div>
+
+    <!-- Mensagem de Contato -->
+    <div class="text-center mt-4">
+      <p class="text-[#828282]">Em caso de dúvida, ligue para +55 021 1234-5678</p>
+    </div>
+  </div>
+
+  <script>
+    function openEditTab(section) {
+      document.getElementById('view-tab').classList.add('hidden');
+      document.getElementById('edit-tab').classList.remove('hidden');
+      
+      if (section === 'personal') {
+        document.getElementById('edit-personal').classList.remove('hidden');
+        document.getElementById('edit-address').classList.add('hidden');
+      } else if (section === 'address') {
+        document.getElementById('edit-address').classList.remove('hidden');
+        document.getElementById('edit-personal').classList.add('hidden');
+      }
+    }
+
+    function closeEditTab() {
+      document.getElementById('view-tab').classList.remove('hidden');
+      document.getElementById('edit-tab').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
