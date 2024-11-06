@@ -12,7 +12,7 @@ module.exports = {
       },
 
       colors: {
-        primaryBlue: '#3B87FA',      // Azul primário
+        primaryBlue: '#2A56ED',      // Azul primário
         secondaryBlue: '#2A5EAD',    // Azul secundário
         accentBlue: '#1D437A',       // Azul de destaque
         gray: '#E6E6E7',             // Cinza
