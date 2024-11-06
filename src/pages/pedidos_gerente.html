@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../style/output.css" rel="stylesheet">
+  <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+</head>
+<body>
+
+  <header class="pl-2 pr-6 w-full h-28 bg-secondaryBlue fixed top-0 z-10 flex items-center justify-between border-b-accentBlue border-b-8">
+
+    <div>
+      <a href="./catálogo.html"> <img class="w-20 h-20 cursor-pointer" src="../public/images/logo_pp.png" alt="Logo da Planeta Papel"> </a>
+    </div>
+
+    <div>
+      <a href="./open_menu.html"> <img class="w-10 h-10 cursor-pointer" src="../public/images/menu.png" alt="Menu de Navegação"> </a>
+      <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+    </div>
+
+  </header>
+
+  <main class="pt-36 pb-10 pl-6 pr-6 min-h-full h-auto max-w-full overflow-hidden">
+
+    <div class="flex flex-col gap-5 mb-8">
+        <div class="flex items-center gap-3 w-[300px]">
+            <img src="../public/images/pedido.png" alt="" class="size-8">
+            <h1 class="text-2xl font-semibold text-secondaryBlue">Todos os Pedidos</h1>
+        </div>
+    </div>
+
+    <form class="w-full max-w-[1200px] mx-auto">
+        <div class="flex">
+
+            <button id="dropdown-button" data-dropdown-toggle="dropdown1" class="bg-secondaryBlue border-accentBlue flex-shrink-0 z-[5] inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
+                <span class="text-white font-bold">Valor</span>
+                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg>
+            </button>
+
+            <div id="dropdown1" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+                    <li>
+                        <button type="button" class="inline-flex w-full px-4 py-2 hover:text-primaryBlue dark:hover:bg-gray-600 dark:hover:text-white">Maior valor</button>
+                    </li>
+                    <li>
+                        <button type="button" class="inline-flex w-full px-4 py-2 hover:text-primaryBlue dark:hover:bg-gray-600 dark:hover:text-white">Menor valor</button>
+                    </li>
+                </ul>
+            </div>
+
+            <button id="dropdown-button" data-dropdown-toggle="dropdown2" class="bg-secondaryBlue border-accentBlue flex-shrink-0 z-[5] inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
+                <span class="text-white font-bold">Data</span>
+                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg>
+            </button>
+
+            <div id="dropdown2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+                    <li>
+                        <button type="button" class="inline-flex w-full px-4 py-2 hover:text-primaryBlue dark:hover:bg-gray-600 dark:hover:text-white">Mais recente</button>
+                    </li>
+                    <li>
+                        <button type="button" class="inline-flex w-full px-4 py-2 hover:text-primaryBlue dark:hover:bg-gray-600 dark:hover:text-white">Mais antigo</button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="relative w-full">
+                <input type="search" id="search-dropdown" class="overflow-hidden whitespace-nowrap text-ellipsis block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" 
+                placeholder="Pesquise por usuario ou item vinculado ao pedido" required />
+
+                <button type="submit" class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white rounded-e-lg border border-blue-700 hover:bg-primaryBlue focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-primaryBlue dark:hover:bg-primaryBlue bg-secondaryBlue dark:focus:ring-blue-800">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+    <hr class="my-10 w-full bg-accentBlue">
+    
+    <div class="mt-5">
+        <div class="flex flex-col gap-5 mb-8 max-w-full w-auto">
+            <div class="min-w-[4500px] w-full pl-6 flex items-center gap-3">
+                <h1 class="text-2xl font-semibold text-secondaryBlue">🗓 Agosto de 2024..............</h1>
+            </div>
+        </div>
+        
+        
+        <!-- PEDIDOS -->
+        <a href="./cancelar_pedido.html">
+          <div class="cursor-pointer w-full h-[100px] min-w-[300px] mt-5 flex flex-col justify-center pl-6 bg-white rounded-3xl border-2 border-accentBlue">
+              <div class="w-full min-w-[200px] h-full flex justify-between px-6 items-center">
+                  <div>
+                      <h1 class="text-xl font-bold text-primaryBlue">XX/XX/XXXX</h1>
+                      <h2 class="font-bold text-sm">R$ XX,XX</h2>
+                  </div>
+                  <img src="../public/images/ok_verde.png" class="size-10" alt="">
+              </div>
+          </div>
+        </a>
+
+        <a href="./cancelar_pedido.html">
+          <div class="cursor-pointer w-full h-[100px] min-w-[300px] mt-5 flex flex-col justify-center pl-6 bg-white rounded-3xl border-2 border-accentBlue">
+              <div class="w-full min-w-[200px] h-full flex justify-between px-6 items-center">
+                  <div>
+                      <h1 class="text-xl font-bold text-primaryBlue">XX/XX/XXXX</h1>
+                      <h2 class="font-bold text-sm">R$ XX,XX</h2>
+                  </div>
+                  <img src="../public/images/cancelar_vermelho.png" class="size-10" alt="">
+              </div>
+          </div>
+        </a>
+    
+        
+    </div>
+
+    <hr class="my-10 w-full bg-accentBlue">
+
+    <div class="mt-5">
+        <div class="flex flex-col gap-5 mb-8 max-w-full w-auto">
+            <div class="min-w-[4500px] w-full pl-6 flex items-center gap-3">
+                <h1 class="text-2xl font-semibold text-secondaryBlue">🗓 Junho de 2024..............</h1>
+            </div>
+        </div>
+        
+        
+        <!-- PEDIDOS -->
+        <a href="./cancelar_pedido.html">
+          <div class="cursor-pointer w-full h-[100px] min-w-[300px] mt-5 flex flex-col justify-center pl-6 bg-white rounded-3xl border-2 border-accentBlue">
+              <div class="w-full min-w-[200px] h-full flex justify-between px-6 items-center">
+                  <div>
+                      <h1 class="text-xl font-bold text-primaryBlue">XX/XX/XXXX</h1>
+                      <h2 class="font-bold text-sm">R$ XX,XX</h2>
+                  </div>
+                  <img src="../public/images/ok_verde.png" class="size-10" alt="">
+              </div>
+          </div>
+        </a>
+
+        <a href="./cancelar_pedido.html">
+          <div class="cursor-pointer w-full h-[100px] min-w-[300px] mt-5 flex flex-col justify-center pl-6 bg-white rounded-3xl border-2 border-accentBlue">
+              <div class="w-full min-w-[200px] h-full flex justify-between px-6 items-center">
+                  <div>
+                      <h1 class="text-xl font-bold text-primaryBlue">XX/XX/XXXX</h1>
+                      <h2 class="font-bold text-sm">R$ XX,XX</h2>
+                  </div>
+                  <img src="../public/images/ok_verde.png" class="size-10" alt="">
+              </div>
+          </div>
+        </a>
+
+        <a href="./cancelar_pedido.html">
+          <div class="cursor-pointer w-full h-[100px] min-w-[300px] mt-5 flex flex-col justify-center pl-6 bg-white rounded-3xl border-2 border-accentBlue">
+              <div class="w-full min-w-[200px] h-full flex justify-between px-6 items-center">
+                  <div>
+                      <h1 class="text-xl font-bold text-primaryBlue">XX/XX/XXXX</h1>
+                      <h2 class="font-bold text-sm">R$ XX,XX</h2>
+                  </div>
+                  <img src="../public/images/ok_verde.png" class="size-10" alt="">
+              </div>
+          </div>
+        </a>
+        
+    </div>
+
+    <hr class="my-10 w-full bg-accentBlue">
+
+    <div class="mt-5">
+        <div class="flex flex-col gap-5 mb-8 max-w-full w-auto">
+            <div class="min-w-[4500px] w-full pl-6 flex items-center gap-3">
+                <h1 class="text-2xl font-semibold text-secondaryBlue">🗓 Fevereiro de 2024..........</h1>
+            </div>
+        </div>
+        
+        
+        <!-- PEDIDOS -->
+         <a href="./cancelar_pedido.html">
+           <div class="cursor-pointer w-full h-[100px] min-w-[300px] mt-5 flex flex-col justify-center pl-6 bg-white rounded-3xl border-2 border-accentBlue">
+               <div class="w-full min-w-[200px] h-full flex justify-between px-6 items-center">
+                   <div>
+                       <h1 class="text-xl font-bold text-primaryBlue">XX/XX/XXXX</h1>
+                       <h2 class="font-bold text-sm">R$ XX,XX</h2>
+                   </div>
+                   <img src="../public/images/ok_verde.png" class="size-10" alt="">
+               </div>
+           </div>
+         </a>
+
+         <a href="./cancelar_pedido.html">
+           <div class="cursor-pointer w-full h-[100px] min-w-[300px] mt-5 flex flex-col justify-center pl-6 bg-white rounded-3xl border-2 border-accentBlue">
+               <div class="w-full min-w-[200px] h-full flex justify-between px-6 items-center">
+                   <div>
+                       <h1 class="text-xl font-bold text-primaryBlue">XX/XX/XXXX</h1>
+                       <h2 class="font-bold text-sm">R$ XX,XX</h2>
+                   </div>
+                   <img src="../public/images/ok_verde.png" class="size-10" alt="">
+               </div>
+           </div>    
+         </a>
+        
+    </div>
+
+    <!--BARRA 1-->
+    <div class="mt-10 pw-full flex justify-center items-center">
+      
+        <div class="flex items-center justify-between w-full px-4 py-3 sm:px-6">
+
+            <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+              <div>
+                <p class="text-ms text-gray-700">
+                  Mostrando
+                  <span class="font-bold">1</span>
+                  até
+                  <span class="font-bold">3</span>
+                  de
+                  <span class="font-bold">10</span>
+                  meses com pedidos
+                </p>
+              </div>
+
+              <div>
+                <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+                  <a href="#" class="bg-primaryBlue relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                    <span class="sr-only">Previous</span>
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path fill-rule="evenodd" d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+
+                  <!-- Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" -->
+                  <a href="#" aria-current="page" class=" bg-white relative z-10 inline-flex items-cente px-4 py-2 text-sm font-semibold focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">1</a>
+                  <a href="#" class=" bg-secondaryBlue text-white relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">2</a>
+                  <a href="#" class=" bg-white relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
+                  <span class=" bg-white relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 focus:outline-offset-0">...</span>
+                  <a href="#" class=" bg-white relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
+                  <a href="#" class="bg-white relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>
+                  <a href="#" class=" bg-white relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">10</a>
+                  
+                  <a href="#" class=" bg-primaryBlue relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                    <span class="sr-only">Next</span>
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+          
+  
+    </div>
+
+    <!-- BARRA 2 -->
+    <div class="pw-full flex justify-center items-center -mt-8">
+      
+      <div class="flex items-center justify-between w-full px-4 py-3 sm:px-6">
+
+          <div class="sm:hidden w-full space-y-4">
+
+            <div class="w-full flex items-center justify-center">
+              <nav class="isolate inline-flex -space-x-px gap-4 rounded-md shadow-sm items-center text-accentBlue font-bold" aria-label="Pagination">
+
+                <a href="#" class="bg-primaryBlue relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                  <span class="sr-only">Previous</span>
+                  <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                    <path fill-rule="evenodd" d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+
+                Navegar
+                
+                <a href="#" class=" bg-primaryBlue relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                  <span class="sr-only">Next</span>
+                  <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                    <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+
+              </nav>
+            </div>
+
+            <div class="w-full text-center">
+              <p class="text-sm text-gray-700">
+                Mostrando
+                <span class="font-bold">1</span>
+                até
+                <span class="font-bold">3</span>
+                de
+                <span class="font-bold">10</span>
+                meses com pedidos
+              </p>
+            </div>
+
+          </div>
+        </div>
+        
+
+    </div>
+
+  </main>
+
+  <footer class="w-full h-20 bg-secondaryBlue flex items-center justify-center border-t-accentBlue border-t-4">
+    <h3 class="text-white text-center text-xs">
+       &copy; Todos os Direitos Reservados à 
+      <br>
+      Planeta Papel&trade;
+    </h3>
+  </footer>
+
+</body>
+</html>
